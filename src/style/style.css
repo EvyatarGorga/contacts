@@ -1,0 +1,172 @@
+body{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+.app{
+  width: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  box-shadow: 1px 1px 2px 0px #c0c0c0;
+  border-radius: 2px;
+  padding-bottom: 0.5rem;
+}
+main{
+  width: 95%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 3px;
+  transition: all .5s;
+  box-shadow: 1px 1px 2px 0px #c0c0c0;
+  margin: 1rem;
+}
+.searchContainer{
+  background-color: #f5f5f5;
+  width: 95%;
+  margin: .5rem;
+  height: 20px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+input[type=search]{
+  width: 85%;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+  padding: 0.2rem 0.2rem !important;
+  border: 0;
+}
+.loadMore{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+button[type=button]{
+  font-size: 10px;
+  background-color: #f50057;
+  padding: 0.5rem 0.5rem !important;
+  border: 0;
+  width: 90px;
+  border-radius: 3px;
+  margin: 1.8rem;
+  color: white;
+  cursor: pointer;
+  transition: all .2s;
+}
+button[type=button]:hover{
+  box-shadow: 1px 1px 2px 0px #c0c0c0;
+  font-weight: bold;
+}
+.userObj{
+  width: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: .5rem;
+  margin-bottom: 0;
+  transition: all .5s;
+  -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein .5s; /* Firefox < 16 */
+        -ms-animation: fadein .5s; /* Internet Explorer */
+         -o-animation: fadein .5s; /* Opera < 12.1 */
+            animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.userImg > img{
+  border-radius: 50px;
+  width: 80px;
+}
+.userInfo{
+  background-color: #7f7f7f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 2px;
+  padding: 0.5rem;
+  height: 40px;
+  color: white;
+  font-size: 11px;
+}
+.userInfo > span{
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.loaderContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#loader{
+  display: none;
+  width: 40px;
+  margin: 1rem;
+  height: 40px;
+}
+.modalSearch{
+  width: 918px;
+  box-shadow: 0px 2px 2px 0px #c0c0c0;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  height: 20px;
+  padding: 1rem;
+}
+.loaderPage{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  height: 70px;
+  color: #cecece;
+  position: absolute;
+  top: 0;
+}
+/* Edit placeholder color */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #342e3f;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #342e3f;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #342e3f;
+}
+
+@media screen and (max-width: 950px){
+  .app{
+    width: 90%;
+  }
+  .userObj{
+    width: 290px;
+  }
+  .modalSearch{
+    width: 100%;
+  }
+}

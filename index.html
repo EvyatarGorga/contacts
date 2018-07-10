@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<html ng-app="myApp">
+		<head>
+			<title>Contacts</title>
+			<meta name="viewport" content="width=device-width">
+			<link rel="stylesheet" href="src/style/style.css">
+			<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+			<script src="src/app/javascript/angularjs.js"></script>
+			<script src="src/app/javascript/jquery.js"></script>
+		</head>
+		<body ng-controller="myApp">
+			<div class="loaderPage">
+				<img src="src/images/loader.gif" width="50">Please wait...
+			</div>
+			<div class="app">
+				<div class="searchContainer">
+					<input type="search" placeholder="Search" ng-model="search">
+				</div>
+				<div class="modalSearch">
+					<input type="search" placeholder="Search" ng-model="search">
+				</div>
+				<main>
+					<div class="userObj" ng-repeat="user in data | filter: search">
+						<div class="userImg">
+							<img id="profileImg" src="{{user.picture.large}}">
+						</div>
+						<div class="userInfo">
+							<span>
+								{{user.name.first | capitalizeWord}}
+								{{user.name.last  | capitalizeWord}}
+								<img ng-init="setGenderImg(user)" src="{{user.genderImg}}" width="18">
+							</span>
+							<span>{{user.email | capitalizeWord}}</span>
+						</div>
+					</div>
+					<div class="loaderContainer">
+						<img src="src/images/loader.gif" id="loader">
+					</div>
+					<div class="loadMore">
+						<button type="button" name="button" ng-click="getMoreUsers()">LOAD MORE</button>
+
+					</div>
+				</main>
+			</div>
+			<script src="src/app/javascript/main.js"></script>
+			<script src="src/app/javascript/filters.js"></script>
+			<script src="src/app/javascript/events.js"></script>
+		</body>
+	</html>
